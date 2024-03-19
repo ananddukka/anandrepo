@@ -1,29 +1,3 @@
-import org.springframework.beans.factory.annotation.Autowired.*;
-
-import org.springframework.web.bind.annotation.*;
-
-import java.util.*;
-
-import com.example.school.model.Student;
-import com.example.school.service.StudentH2Service;
-
-@RestController  https://github.com/ananddukka/anandrepo.git
-public class StudentController {
-    @Autowired
-    private StudentH2Service studentService;
-
-    @GetMapping("/students")
-    public ArrayList<Student> getStudents() {
-        return studentService.getStudents();
-    }
-
-    @GetMapping("/students/{studentId}")
-    public Student getStudentById(@PathVariable("studentId") int studentId) {
-
-    }
-
-}
-
 package com.example.school.model;
 
 public class Student {

@@ -1,22 +1,20 @@
 package com.example.school.repository;
 
 import com.example.school.model.Student;
-
 import java.util.*;
 
-public interface StudentRepository{
+public interface StudentRepository {
+    ArrayList<Student> getStudents();
 
-ArrayList<Student> getStudents();
+    Student getStudentById(int sudentId);
 
-Student getStudentById(int sudentId);
+    Student addStudent(Student student);
 
-Student addStudent(Student student);
+    String addMultipleStudents(ArrayList<Student> studentsList);
 
-String addMultipleStudents(ArrayList<Student> studentsList);
+    Student updateStudent(int studentId, Student student);
 
-Student updateStudent(int studentId, Student student);
-
-void deleteStudent(int studentId);
+    void deleteStudent(int studentId);
 
 }
 
